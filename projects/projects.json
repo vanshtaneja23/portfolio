@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Spam Message Classifier",
+    "desc": "Built a spam classifier using Naive Bayes, Extra Trees with soft voting. Preprocessed text by tokenizing, stemming, and vectorizing to capture semantic similarity. Evaluated model for precision, recall, and F1-score to ensure balanced classification between spam and ham.",
+    "image": "spam-classifier",
+    "category": "ml",
+    "links": {
+      "view": "#",
+      "code": "#"
+    }
+  }
+]

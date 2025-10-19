@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Submissions - Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #e5ecfb 0%, #f8f9fa 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .header h1 {
+            color: #007A3D;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .stats {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            justify-content: center;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 1.5rem 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            min-width: 150px;
+        }
+
+        .stat-card i {
+            font-size: 2rem;
+            color: #00A651;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-card h3 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-card p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .controls {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #00A651 0%, #007A3D 100%);
+            color: white;
+        }
+
+        .btn-danger {
+            background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+            color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .contacts-grid {
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        }
+
+        .contact-card {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border-left: 4px solid #00A651;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 166, 81, 0.15);
+        }
+
+        .contact-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .contact-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .contact-date {
+            font-size: 0.8rem;
+            color: #666;
+            background: #f8f9fa;
+            padding: 4px 8px;
+            border-radius: 8px;
+        }
+
+        .contact-info {
+            margin-bottom: 1rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-info i {
+            color: #00A651;
+            width: 16px;
+        }
+
+        .contact-message {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 10px;
+            border-left: 3px solid #00A651;
+        }
+
+        .contact-message h4 {
+            color: #333;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .contact-message p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 3rem;
+            color: #666;
+        }
+
+        .empty-state i {
+            font-size: 4rem;
+            color: #ddd;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .stats {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .controls {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contacts-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-envelope"></i> Contact Submissions</h1>
+            <p>Manage and view contact form submissions</p>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <i class="fas fa-envelope"></i>
+                <h3 id="totalCount">0</h3>
+                <p>Total Messages</p>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-calendar-day"></i>
+                <h3 id="todayCount">0</h3>
+                <p>Today</p>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-calendar-week"></i>
+                <h3 id="weekCount">0</h3>
+                <p>This Week</p>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="btn btn-primary" onclick="refreshData()">
+                <i class="fas fa-sync-alt"></i> Refresh
+            </button>
+            <button class="btn btn-primary" onclick="exportData()">
+                <i class="fas fa-download"></i> Export CSV
+            </button>
+            <button class="btn btn-danger" onclick="clearAllData()">
+                <i class="fas fa-trash"></i> Clear All
+            </button>
+        </div>
+
+        <div id="contactsContainer">
+            <!-- Contacts will be loaded here -->
+        </div>
+    </div>
+
+    <script>
+        function loadContacts() {
+            const contacts = JSON.parse(localStorage.getItem('contactSubmissions') || '[]');
+            const container = document.getElementById('contactsContainer');
+
+            // Update stats
+            updateStats(contacts);
+
+            if (contacts.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <i class="fas fa-inbox"></i>
+                        <h3>No contact submissions yet</h3>
+                        <p>Contact form submissions will appear here</p>
+                    </div>
+                `;
+                return;
+            }
+
+            // Sort by newest first
+            contacts.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+
+            const contactsHTML = contacts.map(contact => `
+                <div class="contact-card">
+                    <div class="contact-header">
+                        <div class="contact-name">${contact.name}</div>
+                        <div class="contact-date">${formatDate(contact.timestamp)}</div>
+                    </div>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> ${contact.email}</p>
+                        ${contact.phone ? `<p><i class="fas fa-phone"></i> ${contact.phone}</p>` : ''}
+                    </div>
+                    <div class="contact-message">
+                        <h4>Message:</h4>
+                        <p>${contact.message}</p>
+                    </div>
+                </div>
+            `).join('');
+
+            container.innerHTML = `<div class="contacts-grid">${contactsHTML}</div>`;
+        }
+
+        function updateStats(contacts) {
+            const total = contacts.length;
+            const today = new Date().toDateString();
+            const todayCount = contacts.filter(c => new Date(c.timestamp).toDateString() === today).length;
+
+            const weekAgo = new Date();
+            weekAgo.setDate(weekAgo.getDate() - 7);
+            const weekCount = contacts.filter(c => new Date(c.timestamp) >= weekAgo).length;
+
+            document.getElementById('totalCount').textContent = total;
+            document.getElementById('todayCount').textContent = todayCount;
+            document.getElementById('weekCount').textContent = weekCount;
+        }
+
+        function formatDate(timestamp) {
+            return new Date(timestamp).toLocaleString();
+        }
+
+        function refreshData() {
+            loadContacts();
+        }
+
+        function exportData() {
+            const contacts = JSON.parse(localStorage.getItem('contactSubmissions') || '[]');
+            if (contacts.length === 0) {
+                alert('No data to export');
+                return;
+            }
+
+            const csv = [
+                ['Name', 'Email', 'Phone', 'Message', 'Date'],
+                ...contacts.map(c => [
+                    c.name,
+                    c.email,
+                    c.phone || '',
+                    c.message.replace(/"/g, '""'),
+                    formatDate(c.timestamp)
+                ])
+            ].map(row => row.map(field => `"${field}"`).join(',')).join('\n');
+
+            const blob = new Blob([csv], { type: 'text/csv' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `contacts_${new Date().toISOString().split('T')[0]}.csv`;
+            a.click();
+            window.URL.revokeObjectURL(url);
+        }
+
+        function clearAllData() {
+            if (confirm('Are you sure you want to delete all contact submissions? This cannot be undone.')) {
+                localStorage.removeItem('contactSubmissions');
+                loadContacts();
+            }
+        }
+
+        // Load contacts on page load
+        loadContacts();
+
+        // Auto-refresh every 30 seconds
+        setInterval(loadContacts, 30000);
+    </script>
+</body>
+
+</html>
