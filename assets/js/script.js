@@ -37,78 +37,7 @@ $(document).ready(function () {
         }, 500, 'linear')
     });
 
-    // <!-- contact form data storage -->
-    $("#contact-form").submit(function (event) {
-        event.preventDefault();
 
-        // Get form data
-        const formData = {
-            name: $('input[name="name"]').val(),
-            email: $('input[name="email"]').val(),
-            phone: $('input[name="phone"]').val(),
-            message: $('textarea[name="message"]').val(),
-            timestamp: new Date().toISOString(),
-            id: Date.now()
-        };
-
-        // Store in localStorage
-        let contacts = JSON.parse(localStorage.getItem('contactSubmissions') || '[]');
-        contacts.push(formData);
-        localStorage.setItem('contactSubmissions', JSON.stringify(contacts));
-
-        // Show success message
-        showSuccessMessage();
-
-        // Reset form
-        document.getElementById("contact-form").reset();
-
-        console.log('Contact saved:', formData);
-    });
-
-    function showSuccessMessage() {
-        // Create success popup
-        const successDiv = document.createElement('div');
-        successDiv.innerHTML = `
-            <div style="
-                position: fixed;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                background: linear-gradient(135deg, #00A651 0%, #007A3D 100%);
-                color: white;
-                padding: 2rem 3rem;
-                border-radius: 20px;
-                box-shadow: 0 10px 30px rgba(0, 166, 81, 0.3);
-                z-index: 10000;
-                text-align: center;
-                font-family: 'Poppins', sans-serif;
-                animation: slideIn 0.5s ease-out;
-            ">
-                <i class="fas fa-check-circle" style="font-size: 3rem; margin-bottom: 1rem; display: block;"></i>
-                <h3 style="margin: 0 0 0.5rem 0; font-size: 1.5rem;">Thank You!</h3>
-                <p style="margin: 0; opacity: 0.9;">Your message has been received. I'll get back to you soon!</p>
-            </div>
-        `;
-
-        // Add animation styles
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes slideIn {
-                from { transform: translate(-50%, -50%) scale(0.8); opacity: 0; }
-                to { transform: translate(-50%, -50%) scale(1); opacity: 1; }
-            }
-        `;
-        document.head.appendChild(style);
-
-        document.body.appendChild(successDiv);
-
-        // Remove after 3 seconds
-        setTimeout(() => {
-            successDiv.remove();
-            style.remove();
-        }, 3000);
-    }
-    // <!-- contact form data storage -->
 
 });
 
@@ -126,19 +55,22 @@ document.addEventListener('visibilitychange',
 
 
 // <!-- typed js effect starts -->
-var typed = new Typed(".typing-text", {
-    strings: [
-        "AI-Driven Solutions",
-        "Scalable Software Engineering",
-        "Data Science & Analytics",
-        "Cloud-Native Development",
-        "Machine Learning Innovation",
-        "Full-Stack Problem Solving"
-    ],
-    loop: true,
-    typeSpeed: 50,
-    backSpeed: 25,
-    backDelay: 500,
+// Initialize typing animation with proper DOM ready check
+$(function () {
+    if (document.querySelector(".typing-text") && window.Typed) {
+        new Typed(".typing-text", {
+            strings: ["Software Engineering"
+                , "Machine Learning",
+                "Natural Language Processing (NLP)",
+                "Cloud And DevOps",
+                "Reinforcement Learning",
+                "Full-Stack Development",
+                "Computer Vision"],
+            typeSpeed: 50,
+            backSpeed: 30,
+            loop: true
+        });
+    }
 });
 // <!-- typed js effect ends -->
 
@@ -253,17 +185,7 @@ document.onkeydown = function (e) {
     }
 }
 
-// Start of Tawk.to Live Chat
-var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-(function () {
-    var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-    s1.async = true;
-    s1.src = 'https://embed.tawk.to/60df10bf7f4b000ac03ab6a8/1f9jlirg6';
-    s1.charset = 'UTF-8';
-    s1.setAttribute('crossorigin', '*');
-    s0.parentNode.insertBefore(s1, s0);
-})();
-// End of Tawk.to Live Chat
+
 
 
 /* ===== SCROLL REVEAL ANIMATION ===== */
@@ -271,7 +193,9 @@ const srtop = ScrollReveal({
     origin: 'top',
     distance: '80px',
     duration: 1000,
-    reset: true
+    reset: true,
+    viewFactor: 0.25,
+    viewOffset: { top: 0, right: 0, bottom: 0, left: 0 }
 });
 
 /* SCROLL HOME */
@@ -296,8 +220,8 @@ srtop.reveal('.about .content .resumebtn', { delay: 200 });
 
 
 /* SCROLL SKILLS */
-srtop.reveal('.skills .container', { interval: 200 });
-srtop.reveal('.skills .container .bar', { delay: 400 });
+srtop.reveal('.skills .container', { interval: 100 });
+srtop.reveal('.skills .container .bar', { delay: 100, interval: 150 });
 
 /* SCROLL EDUCATION */
 srtop.reveal('.education .box', { interval: 200 });
@@ -309,6 +233,3 @@ srtop.reveal('.work .box', { interval: 200 });
 srtop.reveal('.experience .timeline', { delay: 400 });
 srtop.reveal('.experience .timeline .container', { interval: 400 });
 
-/* SCROLL CONTACT */
-srtop.reveal('.contact .container', { delay: 400 });
-srtop.reveal('.contact .container .form-group', { delay: 400 });
