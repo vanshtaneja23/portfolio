@@ -105,7 +105,7 @@
     },
     {
         "name": "PyTorch",
-        "icon": "https://img.icons8.com/color/48/000000/pytorch.png"
+        "icon": "https://raw.githubusercontent.com/pytorch/pytorch/master/docs/source/_static/img/pytorch-logo-flame.svg"
     },
     {
         "name": "Scikit-learn",
