@@ -54,8 +54,9 @@
     <div class="content">
       <h2>Hi There,<br /> I'm Vansh <span>Taneja</span></h2>
       <p>i am into <span class="typing-text"></span></p>
-      <a href="#about" class="btn"><span>About Me</span>
-        <i class="fas fa-arrow-circle-down"></i>
+      <a href="#about" class="hero-btn">
+        <span>Discover More</span>
+        <i class="fas fa-arrow-down"></i>
       </a>
       <div class="socials">
         <ul class="social-icons">
@@ -79,50 +80,187 @@
   <section class="about" id="about">
     <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
 
-    <div class="row">
-
-      <div class="image">
-        <img draggable="false" class="tilt" src="./assets/images/profile2.jpg" alt="">
-      </div>
-      <div class="content">
+    <div class="about-container">
+      <div class="about-intro">
         <h3>I'm Vansh Taneja</h3>
         <span class="tag">AI-Driven Software Engineer & Data Science Innovator</span>
-
-        <p>Hi, I'm Vansh Taneja — a Computing Science student at the University of Alberta (Bachelor of Science in
-          Artificial Intelligence option, Class of 2026).
-          I specialize in software development, machine learning, and data-driven problem solving, with hands-on
-          experience building full-stack applications, AI models, and cloud-based solutions.
-          <br><br>
-          I've worked as a Software Development Intern and Data Science Intern at Vita Actives, where I built Flask
-          microservices, React dashboards, and predictive ML models for inventory and customer analytics.
-          As a Research Assistant, I also extracted and analyzed large-scale datasets using APIs and web pipelines to
-          support labour market research.
-          <br><br>
-          Some of my key projects include a Spam-Ham SMS Classifier (NLP + Scikit-learn, deployed with Streamlit), an
-          Event Lottery Android App (Java + Firebase), and a Self-Driving Race Car simulation using Deep Q-Learning in
-          PyTorch.
-          <br><br>
-          I'm passionate about creating scalable software, leveraging AI/ML for real-world impact, and continuously
-          learning emerging tools in cloud computing, DevOps, and reinforcement learning.
+        <p class="intro-text">
+          Hi, I'm Vansh Taneja — a Computing Science student at the University of Alberta (Bachelor of Science in
+          Artificial Intelligence option, Class of 2026). I specialize in software development, machine learning, and
+          data-driven problem solving, with hands-on experience building full-stack applications, AI models, and
+          cloud-based solutions.
         </p>
+      </div>
 
-        <div class="box-container">
-          <!-- <div class="box">
-              <p><span> age: </span> 20</p>
-              <p><span> phone : </span> +91 XXX-XXX-XXXX</p>
-            </div> -->
-          <div class="box">
-            <p><span> email : </span> vtaneja1@ualberta.ca</p>
-            <p><span> place : </span> Edmonton, AB, Canada</p>
+      <!-- Animated Stats Section -->
+      <div class="stats-container">
+        <div class="stat-box">
+          <div class="stat-icon">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <div class="stat-number" data-target="70000" data-suffix="+">0</div>
+          <div class="stat-label">Lines of Code Written</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-icon">
+            <i class="fas fa-project-diagram"></i>
+          </div>
+          <div class="stat-number" data-target="20" data-suffix="+">0</div>
+          <div class="stat-label">Projects Delivered</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-icon">
+            <i class="fas fa-server"></i>
+          </div>
+          <div class="stat-number" data-target="50" data-suffix="M+">0</div>
+          <div class="stat-label">Data Records Processed</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <div class="stat-number" data-target="2000" data-suffix="+">0</div>
+          <div class="stat-label">Hours of Coding</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-icon">
+            <i class="fas fa-bug"></i>
+          </div>
+          <div class="stat-number" data-target="95" data-suffix="%">0</div>
+          <div class="stat-label">Bug Reduction Rate</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <div class="stat-number" data-target="30" data-suffix="%">0</div>
+          <div class="stat-label">Performance Improvement</div>
+        </div>
+      </div>
+
+      <div class="highlights-grid">
+        <div class="highlight-card">
+          <div class="icon-wrapper">
+            <i class="fas fa-code"></i>
+          </div>
+          <h4>Full-Stack Development</h4>
+          <p>Built Flask microservices, React dashboards with TailwindCSS, and integrated REST APIs for seamless
+            data synchronization</p>
+          <div class="skill-progress">
+            <div class="progress-bar" data-progress="95"></div>
           </div>
         </div>
 
-        <div class="resumebtn">
-          <a href="assets/resume.pdf" target="_blank" class="btn"><span>Resume</span>
-            <i class="fas fa-chevron-right"></i>
-          </a>
+        <div class="highlight-card">
+          <div class="icon-wrapper">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h4>Machine Learning</h4>
+          <p>Developed predictive ML models using Random Forest, XGBoost, and deep learning frameworks like PyTorch
+            for real-world applications</p>
+          <div class="skill-progress">
+            <div class="progress-bar" data-progress="90"></div>
+          </div>
         </div>
 
+        <div class="highlight-card">
+          <div class="icon-wrapper">
+            <i class="fas fa-database"></i>
+          </div>
+          <h4>Data Science</h4>
+          <p>Performed customer segmentation, demand forecasting, and NLP-based sentiment analysis to drive
+            data-driven insights</p>
+          <div class="skill-progress">
+            <div class="progress-bar" data-progress="92"></div>
+          </div>
+        </div>
+
+        <div class="highlight-card">
+          <div class="icon-wrapper">
+            <i class="fas fa-cloud"></i>
+          </div>
+          <h4>Cloud & DevOps</h4>
+          <p>Deployed scalable applications using cloud platforms with CI/CD pipelines, automated testing, and
+            comprehensive documentation</p>
+          <div class="skill-progress">
+            <div class="progress-bar" data-progress="88"></div>
+          </div>
+        </div>
+
+        <div class="highlight-card">
+          <div class="icon-wrapper">
+            <i class="fas fa-robot"></i>
+          </div>
+          <h4>Reinforcement Learning</h4>
+          <p>Implemented Deep Q-Networks for autonomous agents with advanced techniques like experience replay and
+            target networks</p>
+          <div class="skill-progress">
+            <div class="progress-bar" data-progress="85"></div>
+          </div>
+        </div>
+
+        <div class="highlight-card">
+          <div class="icon-wrapper">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h4>Research & Analytics</h4>
+          <p>Extracted and analyzed large-scale datasets using APIs and web pipelines to support labour market
+            research initiatives</p>
+          <div class="skill-progress">
+            <div class="progress-bar" data-progress="93"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cool Contact Cards -->
+      <div class="contact-cards-container">
+        <div class="contact-card email-card">
+          <div class="card-icon-wrapper">
+            <i class="fas fa-envelope"></i>
+            <div class="icon-pulse"></div>
+          </div>
+          <div class="card-content">
+            <h5>Let's Connect</h5>
+            <a href="mailto:vtaneja1@ualberta.ca" class="contact-link">vtaneja1@ualberta.ca</a>
+            <p class="card-subtitle">Available for collaboration</p>
+          </div>
+          <div class="card-decoration">
+            <i class="fas fa-paper-plane"></i>
+          </div>
+        </div>
+
+        <div class="contact-card location-card">
+          <div class="card-icon-wrapper">
+            <i class="fas fa-map-marker-alt"></i>
+            <div class="icon-pulse"></div>
+          </div>
+          <div class="card-content">
+            <h5>Based In</h5>
+            <div class="location-text">Edmonton 🍁</div>
+            <p class="card-subtitle">Alberta, Canada</p>
+          </div>
+          <div class="card-decoration">
+            <i class="fas fa-globe-americas"></i>
+          </div>
+        </div>
+
+        <div class="contact-card status-card">
+          <div class="card-icon-wrapper">
+            <i class="fas fa-briefcase"></i>
+            <div class="icon-pulse"></div>
+          </div>
+          <div class="card-content">
+            <h5>Current Status</h5>
+            <div class="status-badge">
+              <span class="status-dot"></span>
+              Available for Internships 2025
+            </div>
+            <p class="card-subtitle">Full-time & Co-op opportunities</p>
+          </div>
+          <div class="card-decoration">
+            <i class="fas fa-rocket"></i>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -357,11 +495,9 @@
             <p>Feb 2025 - Mar 2025 | Edmonton, AB</p>
             <div class="job-description">
               <ul>
-                <li>Extracted and processed large-scale job posting data using SEMrush API</li>
-                <li>Performed traffic and user behavior analysis across 6,000+ websites to support labour market
-                  research</li>
-                <li>Built data cleaning pipelines for reliable and scalable web metrics across countries and market
-                  timeframes</li>
+                <li>Built scalable <strong>Python ETL pipelines</strong> using <strong>SEMrush API + SQL</strong> (processing 50M+ web data records from 6,000+ domains)</li>
+                <li>Implemented <strong>schema validation, audit logging, and fault-tolerant batch jobs</strong> for robust data processing</li>
+                <li>Optimized <strong>SQL analytics workflows</strong> to extract <strong>keyword decay trends, seasonal patterns, and anomalies</strong></li>
               </ul>
             </div>
           </div>
@@ -371,19 +507,18 @@
       <div class="container left">
         <div class="content">
           <div class="tag">
-            <h2>Vita Activa</h2>
+            <h2>Vita Actives</h2>
           </div>
           <div class="desc">
             <h3>Software Development Intern</h3>
-            <p>May 2024 - Aug 2024 | Edmonton, AB</p>
+            <p>May 2024 - Aug 2024 | Dublin, IRL (Remote)</p>
             <div class="job-description">
               <ul>
-                <li>Engineered internal Flask microservices to automate reporting, cutting manual data work by 30%</li>
-                <li>Built modular React.js dashboards with TailwindCSS/Chart.js integrated with SQL for real-time
-                  analytics</li>
-                <li>Integrated third-party CRM and ERP systems via REST APIs, improving cross-department data sync</li>
-                <li>Performed unit and integration testing (PyTest, Jest) with detailed documentation; collaborated in
-                  Agile sprints to ensure reliable, client-ready software delivery</li>
+                <li>Designed and deployed containerized <strong>Flask microservices on AWS EC2</strong> using <strong>Docker and Nginx</strong></li>
+                <li>Implemented <strong>RESTful APIs with JWT-based authentication</strong> for secure data access</li>
+                <li>Developed <strong>React + PostgreSQL dashboards</strong> with real-time metrics (<strong>Chart.js, SQL queries</strong>)</li>
+                <li>Integrated <strong>CRM/ERP systems</strong> using idempotent API calls, retry logic, and exponential backoff</li>
+                <li>Set up <strong>CI/CD pipelines (GitHub Actions)</strong>, instrumented monitoring and logs (leading to a <strong>95% reduction in unhandled runtime exceptions</strong>)</li>
               </ul>
             </div>
           </div>

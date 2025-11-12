@@ -131,9 +131,9 @@ function showProjects(projects) {
     /* ===== SCROLL REVEAL ANIMATION ===== */
     const srtop = ScrollReveal({
         origin: 'top',
-        distance: '80px',
-        duration: 1000,
-        reset: true
+        distance: '30px',
+        duration: 600,
+        reset: false
     });
 
     /* SCROLL PROJECTS */
@@ -191,17 +191,17 @@ document.onkeydown = function (e) {
 /* ===== SCROLL REVEAL ANIMATION ===== */
 const srtop = ScrollReveal({
     origin: 'top',
-    distance: '80px',
-    duration: 1000,
-    reset: true,
-    viewFactor: 0.25,
+    distance: '30px',
+    duration: 600,
+    reset: false,
+    viewFactor: 0.15,
     viewOffset: { top: 0, right: 0, bottom: 0, left: 0 }
 });
 
 /* SCROLL HOME */
 srtop.reveal('.home .content h3', { delay: 200 });
 srtop.reveal('.home .content p', { delay: 200 });
-srtop.reveal('.home .content .btn', { delay: 200 });
+srtop.reveal('.home .content .hero-btn', { delay: 200 });
 
 srtop.reveal('.home .image', { delay: 400 });
 srtop.reveal('.home .linkedin', { interval: 600 });
@@ -212,16 +212,86 @@ srtop.reveal('.home .instagram', { interval: 600 });
 srtop.reveal('.home .dev', { interval: 600 });
 
 /* SCROLL ABOUT */
-srtop.reveal('.about .content h3', { delay: 200 });
-srtop.reveal('.about .content .tag', { delay: 200 });
-srtop.reveal('.about .content p', { delay: 200 });
-srtop.reveal('.about .content .box-container', { delay: 200 });
-srtop.reveal('.about .content .resumebtn', { delay: 200 });
+srtop.reveal('.about .about-intro', { delay: 200 });
+srtop.reveal('.about .stats-container', { delay: 300 });
+srtop.reveal('.about .highlight-card', { interval: 150 });
+srtop.reveal('.about .contact-cards-container', { delay: 300 });
+srtop.reveal('.about .contact-card', { interval: 200 });
+
+// Animate stat numbers counting up with suffix support
+function animateStatNumbers() {
+    const statNumbers = document.querySelectorAll('.stat-number');
+    const observerOptions = {
+        threshold: 0.5,
+        rootMargin: '0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+                entry.target.classList.add('animated');
+                const target = parseInt(entry.target.getAttribute('data-target'));
+                const suffix = entry.target.getAttribute('data-suffix') || '';
+                const duration = 2000; // 2 seconds
+                const step = target / (duration / 16); // 60fps
+                let current = 0;
+
+                // Add extra animation class for visual effect
+                entry.target.style.transform = 'scale(1.2)';
+                setTimeout(() => {
+                    entry.target.style.transform = 'scale(1)';
+                }, 500);
+
+                const updateNumber = () => {
+                    current += step;
+                    if (current < target) {
+                        entry.target.textContent = Math.floor(current).toLocaleString() + suffix;
+                        requestAnimationFrame(updateNumber);
+                    } else {
+                        entry.target.textContent = target.toLocaleString() + suffix;
+                    }
+                };
+                updateNumber();
+            }
+        });
+    }, observerOptions);
+
+    statNumbers.forEach(stat => observer.observe(stat));
+}
+
+// Animate progress bars
+function animateProgressBars() {
+    const progressBars = document.querySelectorAll('.progress-bar');
+    const observerOptions = {
+        threshold: 0.5,
+        rootMargin: '0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+                entry.target.classList.add('animated');
+                const progress = entry.target.getAttribute('data-progress');
+                setTimeout(() => {
+                    entry.target.style.width = progress + '%';
+                }, 200);
+            }
+        });
+    }, observerOptions);
+
+    progressBars.forEach(bar => observer.observe(bar));
+}
+
+// Initialize animations when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    animateStatNumbers();
+    animateProgressBars();
+});
 
 
 /* SCROLL SKILLS */
-srtop.reveal('.skills .container', { interval: 100 });
-srtop.reveal('.skills .container .bar', { delay: 100, interval: 150 });
+srtop.reveal('.skills .container', { delay: 100 });
+srtop.reveal('.skills .container .bar', { interval: 80 });
 
 /* SCROLL EDUCATION */
 srtop.reveal('.education .box', { interval: 200 });
