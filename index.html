@@ -8,631 +8,406 @@
   <meta name="keywords"
     content="Vansh Taneja, portfolio, software developer, computer science, AI, machine learning, full stack dev, personal portfolio, portfolio design, portfolio website" />
   <meta name="description"
-    content="Vansh Taneja - Computing Science student (AI specialization) at University of Alberta. Software Engineer & Data Scientist with experience in Flask microservices, React dashboards, ML models, and cloud solutions. Ready for 2025 internships!" />
+    content="Vansh Taneja - Distributed Systems & AI engineer. Computing Science (AI) at University of Alberta, building scalable backend platforms." />
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/orchestrator.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- Favicon -->
-  <link id='favicon' rel="shortcut icon" href="./assets/images/hero.png?v=2" type="image/x-png">
   <title>Portfolio | Vansh Taneja</title>
 </head>
 
-<body oncontextmenu="return false">
-
-  <!-- pre loader -->
-  <!-- <div class="loader-container">
-  <img draggable="false" src="./assets/images/preloader.gif" alt="">
-</div> -->
-
-  <!-- navbar starts -->
-  <header>
-    <a href="/" class="logo"><i class="fab fa-node-js"></i> Vansh</a>
-
-    <div id="menu" class="fas fa-bars"></div>
-    <nav class="navbar">
-      <ul>
-        <li><a class="active" href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#experience">Experience</a></li>
-
-      </ul>
+<body class="orchestrator">
+  <header class="site-header">
+    <a class="logo" href="#home">Vansh Taneja</a>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="nav">
+      <a class="active" href="#home">Home</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
-  <!-- navbar ends -->
 
-
-  <!-- hero section starts -->
-  <section class="home" id="home">
-    <div id="particles-js"></div>
-
-    <div class="content">
-      <h2>Hi There,<br /> I'm Vansh <span>Taneja</span></h2>
-      <p>i am into <span class="typing-text"></span></p>
-      <a href="#about" class="hero-btn">
-        <span>Discover More</span>
-        <i class="fas fa-arrow-down"></i>
-      </a>
-      <div class="socials">
-        <ul class="social-icons">
-          <li><a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/vansh-taneja-a10746238/"
-              target="_blank"><i class="fab fa-linkedin"></i></a></li>
-          <li><a class="github" aria-label="GitHub" href="https://github.com/vanshtaneja23" target="_blank"><i
-                class="fab fa-github"></i></a></li>
-          <li><a class="email" aria-label="Email" href="mailto:vtaneja1@ualberta.ca" target="_blank"><i
-                class="fas fa-envelope"></i></a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="image">
-      <img draggable="false" class="tilt" src="./assets/images/hero.png" alt="">
-    </div>
-  </section>
-  <!-- hero section ends -->
-
-
-  <!-- about section starts -->
-  <section class="about" id="about">
-    <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
-
-    <div class="about-container">
-      <div class="about-intro">
-        <h3>I'm Vansh Taneja</h3>
-        <span class="tag">AI-Driven Software Engineer & Data Science Innovator</span>
-        <p class="intro-text">
-          Hi, I'm Vansh Taneja — a Computing Science student at the University of Alberta (Bachelor of Science in
-          Artificial Intelligence option, Class of 2026). I specialize in software development, machine learning, and
-          data-driven problem solving, with hands-on experience building full-stack applications, AI models, and
-          cloud-based solutions.
-        </p>
-      </div>
-
-      <!-- Animated Stats Section -->
-      <div class="stats-container">
-        <div class="stat-box">
-          <div class="stat-icon">
-            <i class="fas fa-laptop-code"></i>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">Distributed Systems & AI</p>
+          <h1>Vansh Taneja</h1>
+          <p class="hero-subtitle">
+            Computing Science (AI) at the University of Alberta. I build event-driven platforms,
+            backend infrastructure, and applied ML systems that scale.
+          </p>
+          <div class="hero-chips" data-rotate>
+            <span class="chip">Distributed Systems</span>
+            <span class="chip">ML Systems</span>
+            <span class="chip">Data Engineering</span>
+            <span class="chip">LLM Pipelines</span>
           </div>
-          <div class="stat-number" data-target="70000" data-suffix="+">0</div>
-          <div class="stat-label">Lines of Code Written</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-icon">
-            <i class="fas fa-project-diagram"></i>
+          <p class="hero-typing">Building <span class="typing-text"></span></p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#projects">View Projects</a>
+            <a class="btn ghost" href="mailto:vtaneja1@ualberta.ca">Contact Me</a>
           </div>
-          <div class="stat-number" data-target="20" data-suffix="+">0</div>
-          <div class="stat-label">Projects Delivered</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-icon">
-            <i class="fas fa-server"></i>
-          </div>
-          <div class="stat-number" data-target="50" data-suffix="M+">0</div>
-          <div class="stat-label">Data Records Processed</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-icon">
-            <i class="fas fa-clock"></i>
-          </div>
-          <div class="stat-number" data-target="2000" data-suffix="+">0</div>
-          <div class="stat-label">Hours of Coding</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-icon">
-            <i class="fas fa-bug"></i>
-          </div>
-          <div class="stat-number" data-target="95" data-suffix="%">0</div>
-          <div class="stat-label">Bug Reduction Rate</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-icon">
-            <i class="fas fa-chart-line"></i>
-          </div>
-          <div class="stat-number" data-target="30" data-suffix="%">0</div>
-          <div class="stat-label">Performance Improvement</div>
-        </div>
-      </div>
-
-      <div class="highlights-grid">
-        <div class="highlight-card">
-          <div class="icon-wrapper">
-            <i class="fas fa-code"></i>
-          </div>
-          <h4>Full-Stack Development</h4>
-          <p>Built Flask microservices, React dashboards with TailwindCSS, and integrated REST APIs for seamless
-            data synchronization</p>
-          <div class="skill-progress">
-            <div class="progress-bar" data-progress="95"></div>
+          <div class="hero-socials">
+            <a href="https://www.linkedin.com/in/vansh-taneja-a10746238/" target="_blank" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/vanshtaneja23" target="_blank" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:vtaneja1@ualberta.ca" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
           </div>
         </div>
-
-        <div class="highlight-card">
-          <div class="icon-wrapper">
-            <i class="fas fa-brain"></i>
+        <div class="hero-card">
+          <div class="hero-card-header">
+            <span class="pill">Available for 2026 Internships</span>
+            <span class="mono">Edmonton, AB</span>
           </div>
-          <h4>Machine Learning</h4>
-          <p>Developed predictive ML models using Random Forest, XGBoost, and deep learning frameworks like PyTorch
-            for real-world applications</p>
-          <div class="skill-progress">
-            <div class="progress-bar" data-progress="90"></div>
-          </div>
-        </div>
-
-        <div class="highlight-card">
-          <div class="icon-wrapper">
-            <i class="fas fa-database"></i>
-          </div>
-          <h4>Data Science</h4>
-          <p>Performed customer segmentation, demand forecasting, and NLP-based sentiment analysis to drive
-            data-driven insights</p>
-          <div class="skill-progress">
-            <div class="progress-bar" data-progress="92"></div>
-          </div>
-        </div>
-
-        <div class="highlight-card">
-          <div class="icon-wrapper">
-            <i class="fas fa-cloud"></i>
-          </div>
-          <h4>Cloud & DevOps</h4>
-          <p>Deployed scalable applications using cloud platforms with CI/CD pipelines, automated testing, and
-            comprehensive documentation</p>
-          <div class="skill-progress">
-            <div class="progress-bar" data-progress="88"></div>
-          </div>
-        </div>
-
-        <div class="highlight-card">
-          <div class="icon-wrapper">
-            <i class="fas fa-robot"></i>
-          </div>
-          <h4>Reinforcement Learning</h4>
-          <p>Implemented Deep Q-Networks for autonomous agents with advanced techniques like experience replay and
-            target networks</p>
-          <div class="skill-progress">
-            <div class="progress-bar" data-progress="85"></div>
-          </div>
-        </div>
-
-        <div class="highlight-card">
-          <div class="icon-wrapper">
-            <i class="fas fa-chart-line"></i>
-          </div>
-          <h4>Research & Analytics</h4>
-          <p>Extracted and analyzed large-scale datasets using APIs and web pipelines to support labour market
-            research initiatives</p>
-          <div class="skill-progress">
-            <div class="progress-bar" data-progress="93"></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Cool Contact Cards -->
-      <div class="contact-cards-container">
-        <div class="contact-card email-card">
-          <div class="card-icon-wrapper">
-            <i class="fas fa-envelope"></i>
-            <div class="icon-pulse"></div>
-          </div>
-          <div class="card-content">
-            <h5>Let's Connect</h5>
-            <a href="mailto:vtaneja1@ualberta.ca" class="contact-link">vtaneja1@ualberta.ca</a>
-            <p class="card-subtitle">Available for collaboration</p>
-          </div>
-          <div class="card-decoration">
-            <i class="fas fa-paper-plane"></i>
-          </div>
-        </div>
-
-        <div class="contact-card location-card">
-          <div class="card-icon-wrapper">
-            <i class="fas fa-map-marker-alt"></i>
-            <div class="icon-pulse"></div>
-          </div>
-          <div class="card-content">
-            <h5>Based In</h5>
-            <div class="location-text">Edmonton 🍁</div>
-            <p class="card-subtitle">Alberta, Canada</p>
-          </div>
-          <div class="card-decoration">
-            <i class="fas fa-globe-americas"></i>
-          </div>
-        </div>
-
-        <div class="contact-card status-card">
-          <div class="card-icon-wrapper">
-            <i class="fas fa-briefcase"></i>
-            <div class="icon-pulse"></div>
-          </div>
-          <div class="card-content">
-            <h5>Current Status</h5>
-            <div class="status-badge">
-              <span class="status-dot"></span>
-              Available for Internships 2025
-            </div>
-            <p class="card-subtitle">Full-time & Co-op opportunities</p>
-          </div>
-          <div class="card-decoration">
-            <i class="fas fa-rocket"></i>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- about section ends -->
-
-  <!-- skills section starts -->
-  <section class="skills" id="skills">
-
-    <h2 class="heading"><i class="fas fa-laptop-code"></i> Skills & <span>Abilities</span></h2>
-
-    <div class="container">
-      <div class="row" id="skillsContainer">
-
-        <!-- <div class="bar">
-              <div class="info">
-                <img src="https://img.icons8.com/color/48/000000/adobe-xd.png"/>
-                <span>AdobeXD</span>
+          <div class="hero-card-body">
+            <div class="hero-info">
+              <div class="info-row">
+                <span class="info-label">Focus</span>
+                <span class="info-value">Software Engineering · AI/ML</span>
               </div>
-            </div> -->
-
-      </div>
-    </div>
-  </section>
-  <!-- skills section ends -->
-
-
-  <!-- education section starts -->
-  <section class="education" id="education">
-
-    <h2 class="heading"><i class="fas fa-graduation-cap"></i> My <span>Education</span></h2>
-
-    <p class="qoute">Education is not the learning of facts, but the training of the mind to think.</p>
-
-    <div class="education-timeline">
-      <div class="timeline-years">
-        <div class="year-marker start-year">
-          <div class="year-circle">2022</div>
-          <div class="year-label">Started</div>
-        </div>
-        <div class="timeline-line"></div>
-        <div class="year-marker end-year">
-          <div class="year-circle">2026</div>
-          <div class="year-label">Expected</div>
+              <div class="info-row">
+                <span class="info-label">Current</span>
+                <span class="info-value">TA CMPUT 261 · Tartan Smart Home QA (Ongoing)</span>
+              </div>
+            </div>
+            <div class="hero-tags">
+              <span>Go</span>
+              <span>C#</span>
+              <span>Python</span>
+              <span>AWS</span>
+              <span>FastAPI</span>
+              <span>Kafka</span>
+            </div>
+          </div>
         </div>
       </div>
+      <div class="hero-glow"></div>
+    </section>
 
-      <div class="education-card">
-        <div class="university-logo">
-          <img src="./assets/images/educat/college.jpg" alt="University of Alberta Logo">
-        </div>
-        <div class="education-info">
-          <div class="university-header">
-            <h2>University of Alberta</h2>
-            <div class="location">
-              <i class="fas fa-map-marker-alt"></i>
-              <span>Edmonton, Alberta, Canada</span>
-            </div>
+    <section class="certifications" id="certifications">
+      <div class="section-header">
+        <p class="eyebrow">Certifications</p>
+        <h2>Validated cloud expertise and credentials.</h2>
+      </div>
+      <div class="cert-grid">
+        <div class="cert-card" data-tilt>
+          <div>
+            <p class="mono">AWS</p>
+            <h3>AWS Certified Cloud Practitioner</h3>
+            <p class="muted">Foundational cloud, security, and billing best practices.</p>
           </div>
-          <div class="degree-info">
-            <h3>Bachelor of Science in Computing Science</h3>
-            <h4>Artificial Intelligence Option</h4>
-            <div class="duration">
-              <i class="fas fa-calendar-alt"></i>
-              <span>September 2022 - April 2026</span>
-            </div>
-          </div>
-          <div class="coursework-section">
-            <h5><i class="fas fa-book"></i> Relevant Coursework</h5>
-            <div class="course-grid">
-              <span class="course-tag">Data Structures & Algorithms</span>
-              <span class="course-tag">Software Engineering</span>
-              <span class="course-tag">Reinforcement Learning</span>
-              <span class="course-tag">Search & Planning in AI</span>
-              <span class="course-tag">C Programming</span>
-              <span class="course-tag">Computer Vision</span>
-              <span class="course-tag">Advanced Machine Learning</span>
-              <span class="course-tag">Ethics in AI</span>
-              <span class="course-tag">Database Management</span>
-            </div>
-          </div>
-
+          <span class="pill">Active</span>
         </div>
       </div>
-    </div>
+    </section>
 
-  </section>
-  <!-- education section ends -->
+    <section class="about" id="about">
+      <div class="section-header">
+        <p class="eyebrow">About</p>
+        <h2>Engineering reliable software with AI in mind.</h2>
+      </div>
+      <div class="about-tabs">
+        <button class="tab active" data-tab="mission">Mission</button>
+        <button class="tab" data-tab="build">What I Build</button>
+        <button class="tab" data-tab="now">Now</button>
+      </div>
+      <div class="tab-panels">
+        <div class="tab-panel active" data-panel="mission">
+          <ul>
+            <li>Build software that is reliable, scalable, and easy to maintain</li>
+            <li>Bridge backend engineering with practical AI/ML in production</li>
+            <li>Ship solutions that improve user workflows and system quality</li>
+          </ul>
+        </div>
+        <div class="tab-panel" data-panel="build">
+          <ul>
+            <li>Backend services, APIs, and event-driven pipelines</li>
+            <li>ML systems including NLP, RL, and LLM guardrails</li>
+            <li>Cloud deployments with Docker and AWS tooling</li>
+          </ul>
+        </div>
+        <div class="tab-panel" data-panel="now">
+          <ul>
+            <li>TA for CMPUT 261 and testing the Tartan Smart Home platform</li>
+            <li>Building distributed systems and AI projects from my resume</li>
+            <li>Looking for software engineering and ML internships</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-
-  <!-- work project section starts -->
-  <section class="work" id="work">
-
-    <h2 class="heading"><i class="fas fa-laptop-code"></i> Featured <span>Projects</span></h2>
-
-    <div class="project-showcase">
-      <div class="project-card">
-        <div class="project-image">
-          <img src="./assets/images/projects/spam-classifier.png" alt="Spam Message Classifier">
-          <div class="project-overlay">
-            <div class="tech-stack">
-              <span class="tech-tag">NLP</span>
-              <span class="tech-tag">Scikit-learn</span>
-              <span class="tech-tag">Support Vector Classifier (SVC)</span>
-              <span class="tech-tag">Naive Bayes</span>
-            </div>
+    <section class="skills" id="skills">
+      <div class="section-header">
+        <p class="eyebrow">Skills</p>
+        <h2>Tools, languages, and platforms I ship with.</h2>
+      </div>
+      <div class="skill-marquee" data-marquee>
+        <span>LLM Guardrails</span>
+        <span>Event-Driven Systems</span>
+        <span>FastAPI</span>
+        <span>Kafka</span>
+        <span>RabbitMQ</span>
+        <span>PyTorch</span>
+        <span>Redis</span>
+        <span>PostgreSQL</span>
+        <span>OpenAI API</span>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>Languages</h3>
+          <div class="tag-row">
+            <span>Java</span><span>C#</span><span>Go</span><span>Python</span><span>C++</span><span>SQL</span>
+            <span>TypeScript</span><span>JavaScript</span>
           </div>
         </div>
-        <div class="project-info">
-          <div class="project-header">
-            <h3>Spam Message Classifier</h3>
-            <div class="project-type">
-              <i class="fas fa-brain"></i>
-              <span>Machine Learning</span>
-            </div>
+        <div class="skill-card">
+          <h3>Backend & Systems</h3>
+          <div class="tag-row">
+            <span>Spring Boot</span><span>.NET</span><span>FastAPI</span><span>Flask</span><span>REST APIs</span><span>gRPC</span>
           </div>
-          <p class="project-description">
-            Developed and deployed an SMS Spam Classifier using an ensemble soft-voting approach that combined Naive
-            Bayes, Support Vector Classifier (SVC), and Extra Trees to improve robustness and predictive accuracy.
-            Implemented a comprehensive preprocessing pipeline, including lowercasing, tokenization,
-            stemming/lemmatization, stopword and punctuation removal, and TF-IDF vectorization, to effectively capture
-            semantic patterns within short-text messages. Designed techniques to reduce false positives on benign short
-            messages by introducing a HAM booster for greetings and common safe phrases.
-            Conducted extensive model evaluation with accuracy, precision, recall, F1-score, and confusion matrices to
-            ensure a balanced trade-off between spam detection and minimizing ham misclassification. Achieved perfect
-            test performance (100% precision and recall) across a dataset of 60,000 labeled SMS messages.
+        </div>
+        <div class="skill-card">
+          <h3>Cloud & DevOps</h3>
+          <div class="tag-row">
+            <span>AWS (CCP)</span><span>Docker</span><span>GitHub Actions</span><span>Jenkins</span><span>Kafka</span><span>RabbitMQ</span><span>Nginx</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3>Databases</h3>
+          <div class="tag-row">
+            <span>PostgreSQL</span><span>MongoDB</span><span>Redis</span><span>MinIO</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3>AI / ML</h3>
+          <div class="tag-row">
+            <span>PyTorch</span><span>TensorFlow</span><span>Scikit-learn</span><span>XGBoost</span><span>OpenCV</span><span>OpenAI API</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3>Concepts</h3>
+          <div class="tag-row">
+            <span>Distributed Systems</span><span>Microservices</span><span>CI/CD</span><span>Unit Testing</span><span>Agile/Scrum</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <section class="projects" id="projects">
+      <div class="section-header">
+        <p class="eyebrow">Projects</p>
+        <h2>Systems I’ve architected and shipped.</h2>
+      </div>
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="project-meta">
+            <span class="mono">Micro-Netflix</span>
+            <span class="pill">C# · .NET 8 · RabbitMQ</span>
+          </div>
+          <h3>Micro-Netflix — Distributed Streaming Platform</h3>
+          <p>
+            Microservices-based streaming stack with separate API, worker, and storage services for independent
+            scaling and fault isolation.
           </p>
-          <div class="project-features">
-            <div class="feature-item">
-              <i class="fas fa-check-circle"></i>
-              <span>Text Preprocessing & Vectorization</span>
-            </div>
-            <div class="feature-item">
-              <i class="fas fa-check-circle"></i>
-              <span>Ensemble Learning (Naive Bayes + Extra Trees)</span>
-            </div>
-            <div class="feature-item">
-              <i class="fas fa-check-circle"></i>
-              <span>Model Evaluation & Performance Metrics</span>
-            </div>
-          </div>
-          <div class="project-actions">
-            <a href="https://sms-app-8nth.onrender.com" target="_blank" class="project-btn primary">
-              <i class="fas fa-external-link-alt"></i>
-              <span>Live Demo</span>
-            </a>
-            <a href="https://github.com/vanshtaneja23/sms_app.git" target="_blank" class="project-btn secondary">
-              <i class="fab fa-github"></i>
-              <span>Source Code</span>
-            </a>
-          </div>
-        </div>
-      </div>
+          <ul>
+            <li>Event-driven processing using RabbitMQ background workers</li>
+            <li>Non-blocking video transcoding pipeline</li>
+            <li>S3-compatible object storage with MinIO</li>
+          </ul>
+        </article>
 
-      <div class="project-card">
-        <div class="project-image">
-          <img src="./assets/images/projects/dqn-car-racing.png" alt="DQN Car Racing RL">
-          <div class="project-overlay">
-            <div class="tech-stack">
-              <span class="tech-tag">Deep Q-Learning</span>
-              <span class="tech-tag">PyTorch</span>
-              <span class="tech-tag">Reinforcement Learning</span>
-              <span class="tech-tag">OpenAI Gym</span>
-            </div>
+        <article class="project-card">
+          <div class="project-meta">
+            <span class="mono">Aether</span>
+            <span class="pill">Go · Kafka · gRPC</span>
           </div>
-        </div>
-        <div class="project-info">
-          <div class="project-header">
-            <h3>DQN Car Racing RL</h3>
-            <div class="project-type">
-              <i class="fas fa-robot"></i>
-              <span>Reinforcement Learning</span>
-            </div>
-          </div>
-          <p class="project-description">
-            Developed a state-of-the-art Deep Q-Network autonomous racing agent achieving exceptional performance with
-            847 average reward score and 92% lap completion rate in just 748 training episodes. Engineered a
-            sophisticated
-            CNN architecture processing 84×84×4 grayscale frames with 3 convolutional layers (32→64→64 filters) and
-            fully connected layers outputting 5 discrete racing actions. Implemented advanced RL techniques including
-            experience replay buffer (100K transitions), target network updates every 500 steps, and optimized reward
-            shaping with speed bonuses and off-track penalties. Features comprehensive training analytics with failure
-            mode detection, automated diagnostic tools, and real-time performance visualization. The production-ready
-            system demonstrates emergent racing behaviors including optimal racing lines and dynamic speed control,
-            showcasing practical applications in autonomous vehicle research and AI-driven control systems.
+          <h3>Aether — Distributed Logistics Platform</h3>
+          <p>
+            Event-driven platform with Go microservices and Kafka to decouple order intake, dispatch, and routing.
           </p>
-          <div class="project-features">
-            <div class="feature-item">
-              <i class="fas fa-check-circle"></i>
-              <span>Deep Q-Network Implementation</span>
-            </div>
-            <div class="feature-item">
-              <i class="fas fa-check-circle"></i>
-              <span>Experience Replay & Target Networks</span>
-            </div>
-            <div class="feature-item">
-              <i class="fas fa-check-circle"></i>
-              <span>Real-time Interactive Visualization</span>
-            </div>
+          <ul>
+            <li>Real-time telemetry ingestion via gRPC</li>
+            <li>Redis caching for low-latency fleet state</li>
+            <li>Async persistence to PostgreSQL</li>
+          </ul>
+        </article>
+        <article class="project-card">
+          <div class="project-meta">
+            <span class="mono">Event Lottery System</span>
+            <span class="pill">Android · Firebase</span>
           </div>
-          <div class="project-actions">
-            <a href="https://dqn-carracing-rl-x9h7.onrender.com" target="_blank" class="project-btn primary">
-              <i class="fas fa-external-link-alt"></i>
-              <span>Live Results</span>
-            </a>
-            <a href="https://github.com/vanshtaneja23/dqn-carracing" target="_blank" class="project-btn secondary">
-              <i class="fab fa-github"></i>
-              <span>Source Code</span>
-            </a>
-          </div>
-        </div>
+          <h3>Event Lottery System — Mobile App</h3>
+          <p>Real-time event lottery app with secure role-based access and fast check-in flows.</p>
+          <ul>
+            <li>MVVM architecture with RecyclerView adapters</li>
+            <li>Firestore sync optimized for low-latency updates</li>
+          </ul>
+        </article>
       </div>
-    </div>
-
-  </section>
-  <!-- work project section ends -->
-
-  <!-- experience section starts -->
-  <section class="experience" id="experience">
-
-    <h2 class="heading"><i class="fas fa-briefcase"></i> Experience </h2>
-
-    <div class="timeline">
-
-      <div class="container right">
-        <div class="content">
-          <div class="tag">
-            <h2>University of Alberta</h2>
-          </div>
-          <div class="desc">
-            <h3>Research Assistant</h3>
-            <p>Feb 2025 - Mar 2025 | Edmonton, AB</p>
-            <div class="job-description">
-              <ul>
-                <li>Built scalable <strong>Python ETL pipelines</strong> using <strong>SEMrush API + SQL</strong> (processing 50M+ web data records from 6,000+ domains)</li>
-                <li>Implemented <strong>schema validation, audit logging, and fault-tolerant batch jobs</strong> for robust data processing</li>
-                <li>Optimized <strong>SQL analytics workflows</strong> to extract <strong>keyword decay trends, seasonal patterns, and anomalies</strong></li>
-              </ul>
-            </div>
-          </div>
-        </div>
+      <div class="section-header compact">
+        <p class="eyebrow">AI Projects</p>
+        <h2>Applied ML work with measurable outcomes.</h2>
       </div>
-
-      <div class="container left">
-        <div class="content">
-          <div class="tag">
-            <h2>Vita Actives</h2>
+      <div class="project-grid mini">
+        <article class="project-card">
+          <div class="project-meta">
+            <span class="mono">DQN Autonomous Racing Agent</span>
+            <span class="pill">PyTorch · RL</span>
           </div>
-          <div class="desc">
+          <p>92% lap completion with CNN feature extraction and stable target updates.</p>
+          <ul>
+            <li>Experience replay + reward shaping</li>
+            <li>Diagnostics and real-time training metrics</li>
+          </ul>
+        </article>
+        <article class="project-card">
+          <div class="project-meta">
+            <span class="mono">Spam Classifier (Ensemble NLP)</span>
+            <span class="pill">Scikit-learn · NLP</span>
+          </div>
+          <p>100% precision/recall on 60k SMS dataset using ensemble voting.</p>
+          <ul>
+            <li>TF-IDF + lemmatization pipeline</li>
+            <li>HAM booster to reduce false positives</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="experience" id="experience">
+      <div class="section-header">
+        <p class="eyebrow">Experience</p>
+        <h2>Where I’ve built, taught, and shipped.</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <h3>Software Quality Engineer — Tartan Smart Home Platform</h3>
+            <span class="mono">Ongoing · CMPUT 402</span>
+          </div>
+          <ul>
+            <li>Designing test cases from system requirements and edge cases</li>
+            <li>Validating REST services, simulator behavior, and state consistency</li>
+            <li>Documenting defects and regression findings for fixes</li>
+          </ul>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <h3>Teaching Assistant — CMPUT 261 (Intro to AI)</h3>
+            <span class="mono">Winter 2026 · University of Alberta</span>
+          </div>
+          <ul>
+            <li>Led weekly labs for 200+ students covering search and reinforcement learning</li>
+            <li>Reviewed Python assignments for correctness and efficiency</li>
+            <li>Explained complex AI concepts with clear, structured feedback</li>
+          </ul>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <h3>Research Assistant — Data Engineering</h3>
+            <span class="mono">Feb 2025 – Mar 2025 · University of Alberta (ACLMR)</span>
+          </div>
+          <ul>
+            <li>Engineered fault-tolerant Python ETL pipelines processing 50M+ records</li>
+            <li>Partitioned datasets to meet API rate limits and memory constraints</li>
+            <li>Translated complex schemas into validated SQL datasets</li>
+          </ul>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-header">
             <h3>Software Development Intern</h3>
-            <p>May 2024 - Aug 2024 | Dublin, IRL (Remote)</p>
-            <div class="job-description">
-              <ul>
-                <li>Designed and deployed containerized <strong>Flask microservices on AWS EC2</strong> using <strong>Docker and Nginx</strong></li>
-                <li>Implemented <strong>RESTful APIs with JWT-based authentication</strong> for secure data access</li>
-                <li>Developed <strong>React + PostgreSQL dashboards</strong> with real-time metrics (<strong>Chart.js, SQL queries</strong>)</li>
-                <li>Integrated <strong>CRM/ERP systems</strong> using idempotent API calls, retry logic, and exponential backoff</li>
-                <li>Set up <strong>CI/CD pipelines (GitHub Actions)</strong>, instrumented monitoring and logs (leading to a <strong>95% reduction in unhandled runtime exceptions</strong>)</li>
-              </ul>
-            </div>
+            <span class="mono">May 2024 – Aug 2024 · Vita Actives</span>
           </div>
+          <ul>
+            <li>Deployed Flask microservices on AWS EC2 with Docker and Nginx</li>
+            <li>Built REST APIs with JWT auth and PostgreSQL dashboards</li>
+            <li>Implemented CI/CD with GitHub Actions and monitoring</li>
+          </ul>
         </div>
-      </div>
-
-      <div class="container right">
-        <div class="content">
-          <div class="tag">
-            <h2>Vita Activa</h2>
-          </div>
-          <div class="desc">
+        <div class="timeline-item">
+          <div class="timeline-header">
             <h3>Data Science Intern</h3>
-            <p>May 2023 - Aug 2023 | Edmonton, AB</p>
-            <div class="job-description">
-              <ul>
-                <li>Optimized inventory management using predictive models (Random Forest, XGBoost) to reduce overstock
-                </li>
-                <li>Performed customer segmentation using K-means and DBSCAN for targeted marketing</li>
-                <li>Built a demand forecasting model with time-series analysis to optimize restocking</li>
-                <li>Applied NLP to analyze customer feedback, generating insights that guided product development</li>
-                <li>Documented analytical results to support cross-functional teams in deployment and maintenance</li>
-              </ul>
-            </div>
+            <span class="mono">May 2023 – Aug 2023 · Vita Activa</span>
+          </div>
+          <ul>
+            <li>Optimized inventory forecasting using Random Forest and XGBoost</li>
+            <li>Built segmentation models with K-means and DBSCAN</li>
+            <li>Applied NLP to customer feedback for product insights</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="education" id="education">
+      <div class="section-header">
+        <p class="eyebrow">Education</p>
+        <h2>University of Alberta — BSc Computing Science (AI).</h2>
+      </div>
+      <div class="education-card">
+        <div>
+          <p class="mono">Sep 2022 – Dec 2026</p>
+          <p>Edmonton, AB</p>
+        </div>
+        <div class="education-content">
+          <h3>Relevant Coursework</h3>
+          <div class="tag-row">
+            <span>Data Structures & Algorithms</span><span>Software Engineering</span><span>Operating Systems</span>
+            <span>Database Systems</span><span>Computer Vision</span><span>Reinforcement Learning</span>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    </div>
-
-  </section>
-  <!-- experience section ends -->
-
-
-
-
-  <!-- footer section starts -->
-  <section class="footer">
-
-    <div class="box-container">
-
-      <div class="box">
-        <h3>Vansh Taneja's Portfolio</h3>
-        <p>Thank you for visiting my personal portfolio website. Connect with me over socials. <br /> <br /> Keep Rising
-          🚀. Let's build something amazing together!</p>
+    <section class="contact" id="contact">
+      <div class="section-header">
+        <p class="eyebrow">Contact</p>
+        <h2>Let’s build something ambitious.</h2>
       </div>
-
-      <div class="box">
-        <h3>quick links</h3>
-        <a href="#home"><i class="fas fa-chevron-circle-right"></i> home</a>
-        <a href="#about"><i class="fas fa-chevron-circle-right"></i> about</a>
-        <a href="#skills"><i class="fas fa-chevron-circle-right"></i> skills</a>
-        <a href="#education"><i class="fas fa-chevron-circle-right"></i> education</a>
-        <a href="#work"><i class="fas fa-chevron-circle-right"></i> work</a>
-        <a href="#experience"><i class="fas fa-chevron-circle-right"></i> experience</a>
-      </div>
-
-      <div class="box">
-        <h3>contact info</h3>
-        <p> <i class="fas fa-phone"></i>+1 (780) 264-4853</p>
-        <p> <i class="fas fa-envelope"></i>vtaneja1@ualberta.ca</p>
-        <p> <i class="fas fa-map-marked-alt"></i>Edmonton, AB, Canada</p>
-        <div class="share">
-
-          <a href="https://www.linkedin.com/in/vansh-taneja-a10746238/" class="fab fa-linkedin" aria-label="LinkedIn"
-            target="_blank"></a>
-          <a href="https://github.com/vanshtaneja23" class="fab fa-github" aria-label="GitHub" target="_blank"></a>
-          <a href="mailto:vtaneja1@ualberta.ca" class="fas fa-envelope" aria-label="Mail" target="_blank"></a>
+      <div class="contact-card">
+        <div>
+          <p class="mono">Email</p>
+          <a href="mailto:vtaneja1@ualberta.ca">vtaneja1@ualberta.ca</a>
+        </div>
+        <div>
+          <p class="mono">Phone</p>
+          <a href="tel:+17802644853">+1 (780) 264-4853</a>
+        </div>
+        <div>
+          <p class="mono">Links</p>
+          <div class="contact-links">
+            <a href="https://www.linkedin.com/in/vansh-taneja-a10746238/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/vanshtaneja23" target="_blank">GitHub</a>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
+  </main>
 
-    <h1 class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a
-        href="https://www.linkedin.com/in/vansh-taneja-a10746238/"> Vansh Taneja</a></h1>
+  <footer class="footer">
+    <p>© 2026 Vansh Taneja — Built for scale and clarity.</p>
+  </footer>
 
-  </section>
-  <!-- footer section ends -->
-
-
-  <!-- scroll top btn -->
-  <a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
-  <!-- scroll back to top -->
-
-
-  <!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
-  <!-- jquery cdn -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
+    integrity="sha512-MQG9qIHQ3uWmO9t4mYND8kE5EesxRtmb0XfYv7TC2kCj6qO+1V0lF8HDBXx2WfBFO5W3kRk2qU+qDYdG4hP1Kw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-  <!-- typed.js cdn -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js"
-    integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-  <!-- particle.js links -->
-  <script src="./assets/js/particles.min.js"></script>
-  <script src="./assets/js/app.js"></script>
-
-  <!-- vanilla tilt.js links -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"
-    integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-  <!-- scroll reveal anim -->
-  <script src="https://unpkg.com/scrollreveal"></script>
-
-
-
-  <!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
-
-  <script src="./assets/js/script.js"></script>
-
+  <script src="./assets/js/orchestrator.js"></script>
 </body>
 
 </html>
