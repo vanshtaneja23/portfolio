@@ -59,13 +59,13 @@ document.addEventListener('visibilitychange',
 $(function () {
     if (document.querySelector(".typing-text") && window.Typed) {
         new Typed(".typing-text", {
-            strings: ["Software Engineering"
-                , "Machine Learning",
-                "Natural Language Processing (NLP)",
-                "Cloud And DevOps",
-                "Reinforcement Learning",
-                "Full-Stack Development",
-                "Computer Vision"],
+            strings: ["Distributed Systems",
+                "Backend Infrastructure",
+                "Applied Machine Learning",
+                "Cloud & DevOps",
+                "Event-Driven Architectures",
+                "API Design",
+                "Data Engineering"],
             typeSpeed: 50,
             backSpeed: 30,
             loop: true

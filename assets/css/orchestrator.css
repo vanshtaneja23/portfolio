@@ -73,9 +73,15 @@ main {
   margin-bottom: 3rem;
 }
 
+.ai-projects-header {
+  margin-top: 4.2rem;
+  margin-bottom: 2.8rem;
+}
+
 .section-header h2 {
   font-size: 3.2rem;
   line-height: 1.2;
+  font-weight: 700;
 }
 
 .site-header {
@@ -468,15 +474,34 @@ main {
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
+.project-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.link-card {
+  cursor: pointer;
+}
+
+.link-card:focus-visible {
+  outline: 2px solid rgba(59, 130, 246, 0.7);
+  outline-offset: 4px;
+}
+
 .about-card:hover,
 .skill-card:hover,
 .project-card:hover,
 .timeline-item:hover,
 .education-card:hover,
 .contact-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-2px);
   border-color: rgba(59, 130, 246, 0.5);
   box-shadow: 0 18px 45px rgba(59, 130, 246, 0.2);
+}
+
+.project-card:hover {
+  z-index: 1;
 }
 
 .about-card h3,
@@ -579,7 +604,8 @@ main {
 .projects .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  gap: 2.6rem;
+  margin-bottom: 3.6rem;
 }
 
 .section-header.compact {
@@ -606,6 +632,45 @@ main {
   display: grid;
   gap: 0.8rem;
   margin-top: 1.2rem;
+}
+
+.project-links {
+  margin-top: 0.8rem;
+  align-self: flex-end;
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.project-link {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.2s ease, transform 0.2s ease, text-shadow 0.2s ease;
+}
+
+.project-link::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.55), transparent 70%);
+  opacity: 0;
+  filter: blur(6px);
+  transition: opacity 0.2s ease;
+  z-index: -1;
+}
+
+.project-link:hover {
+  color: #fff;
+  transform: translateY(-1px) scale(1.05);
+  text-shadow: 0 0 12px rgba(59, 130, 246, 0.7);
+}
+
+.project-link:hover::after {
+  opacity: 1;
 }
 
 .project-meta {
@@ -678,6 +743,37 @@ main {
 .cert-card h3 {
   font-size: 1.6rem;
   margin-bottom: 0.6rem;
+}
+
+.cert-link {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.2s ease, transform 0.2s ease, text-shadow 0.2s ease;
+}
+
+.cert-link:hover {
+  color: #fff;
+  transform: translateY(-1px) scale(1.05);
+  text-shadow: 0 0 12px rgba(59, 130, 246, 0.7);
+}
+
+.cert-link::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.55), transparent 70%);
+  opacity: 0;
+  filter: blur(6px);
+  transition: opacity 0.2s ease;
+  z-index: -1;
+}
+
+.cert-link:hover::after {
+  opacity: 1;
 }
 
 .muted {
@@ -794,6 +890,7 @@ main {
     flex-direction: column;
     align-items: flex-start;
   }
+
 }
 
 @media (max-width: 500px) {

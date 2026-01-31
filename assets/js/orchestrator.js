@@ -82,3 +82,26 @@ if (tabButtons.length && tabPanels.length) {
     setActiveTab(tabButtons[autoTabIndex].dataset.tab);
   }, 5000);
 }
+
+const linkCards = Array.from(document.querySelectorAll(".link-card[data-link]"));
+linkCards.forEach((card) => {
+  card.addEventListener("click", (event) => {
+    if (event.target.closest("a")) {
+      return;
+    }
+    const url = card.dataset.link;
+    if (url) {
+      window.open(url, "_blank", "noopener");
+    }
+  });
+
+  card.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      const url = card.dataset.link;
+      if (url) {
+        window.open(url, "_blank", "noopener");
+      }
+    }
+  });
+});
