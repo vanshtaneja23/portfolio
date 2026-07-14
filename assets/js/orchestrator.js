@@ -41,7 +41,7 @@ if (typingTarget && window.Typed) {
       "backend infrastructure",
       "event-driven platforms",
       "applied ML systems",
-      "data engineering",
+      "production software for the City of Edmonton",
     ],
     typeSpeed: 45,
     backSpeed: 25,
